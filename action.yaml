@@ -18,7 +18,6 @@ inputs:
     default: ''
 
 runs:
-  using: 'composite'
     - name: Substitute variables and apply files
       run: |
         envsubst_arg=''
