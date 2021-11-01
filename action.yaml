@@ -48,7 +48,7 @@ runs:
         for file in "${k8_files[@]}"; do
           template=`cat $file | envsubst $envsubst_arg`
           echo "$template"
-          echo "$template" | kubectl apply -f -
+          echo "$template" > $file
         done
       shell: bash
     - name: Set namespace to original value
